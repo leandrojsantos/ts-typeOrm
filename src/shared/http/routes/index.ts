@@ -3,7 +3,7 @@ import { Router } from 'express';
 const routes = Router();
 
 routes.get('/', (request, response) => {
-  return response.json({ message: '*****loading.....' });
+  return response.json({ message: '***** SERVER OK, LOADING .....' });
 });
 
 export default routes;
