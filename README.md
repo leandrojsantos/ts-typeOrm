@@ -144,8 +144,6 @@ docker run \
 
 #### 🎲 Rodando o projeto
 ```bash
-# Clone este repositório
-$ git clone https://github.com/leandrojsantos/ts-typeOrm.git
 
 # Instale as dependências na raiz do projeto
 $ yarn
