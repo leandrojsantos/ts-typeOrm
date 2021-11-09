@@ -37,6 +37,7 @@ Aplicação backend para gestão de vendas com funcionalidades para criação de
 
 ---
 
+
 ## ⚙️ Funcionalidades
 
 Aplicaremos conceitos de boas práticas e qualidade no código, usando Design Patterns, Domain Driven Design (DDD) e Princípios SOLID, além de introduzir Testes Automatizados com o framework Jest.
@@ -100,31 +101,65 @@ O layout da aplicação:
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com),[Node.js](https://nodejs.org/en/),
 
-Fora eles fazer, cadastro em sites que vão nos auxiliar durante o projeto como :
-* []()
+* Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+* Um sgbd que suporte uuuid sugiro [DBeaver](https://dbeaver.io/download/)
 
-#### 1º Criar um arquivo `.env` na raiz da pasta server, onde será guarda as senhas/links de acesso para app
-
+* Ter conhecimento básico sobre container e [Docker](https://docs.docker.com/get-docker/)
+#### 1º Criar um arquivo `ormconfig.json` na raiz da pasta server, onde será config o banco de dados
 ```bash
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "admin",
+  "password": "root",
+  "database": "sales",
+  "entities": [
+    "./src/modules/**/typeorm/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/shared/typeorm/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir":"./src/shared/typeorm/migrations"
+  }
+}
 
-
+```
+#### 2º Postgres através de container Docker
+```bash
+# rode esse comando, caso quera troca senha e nome do database
+# lembre-se de tambem no `ormconfig.json`
+docker run \
+   --name postgres \
+   -e POSTGRES_USER=admin \
+   -e POSTGRES_PASSWORD=root \
+   -e POSTGRES_DB=sales \
+   -p 5432:5432 \
+   -d \
+   postgres:11.5
 
 ```
 
-
 #### 🎲 Rodando o projeto
-
 ```bash
 # Clone este repositório
-$
+$ git clone https://github.com/leandrojsantos/ts-typeOrm.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$
+# Instale as dependências na raiz do projeto
+$ yarn
+$ yarn add -D tsconfig-paths
 
-# Instale as dependências
-$
+# verificar se banco de dado esta criado corretamente e conectado
+# feito rode o comando para criar coluna e tabelas no banco de dados
+$ yarn typeorm migration:run
+
+# start na api
+1 terminal rode yarn dev
+2 abra insonima e nele projeto typeorm-ts
+3 no insomia atualize o token, pois dura 1 dia
+4 teste as funções com CRUD, por exemplo
 
 ```
 ---
@@ -143,21 +178,18 @@ Node.js, Express, Typescript, TypeORM, Postgres através de container Docker, Re
 * Testes Automatizados com o framework Jest
 
 
-### Na parte do Server:
+### Na parte do Server foram utilizadas as seguintes bibliotecas:
+
 ```bash
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.34"
 
 ```
-
-* [Acesse o curso no portal Udemy.](https://www.udemy.com/course/api-restful-de-vendas/?referralCode=6DDEF85A747CA5CC4135)
-
-
-
-
-
-
-
-
-
-
-
-
