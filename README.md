@@ -13,7 +13,6 @@ Tabela de conteúdos
 =================
 <!--ts-->
   * [Sobre o projeto](#-sobre-o-projeto)
-  * [Funcionalidades](#-funcionalidades)
   * [Layout](#-layout)
   * [Como executar o projeto](#-como-executar-o-projeto)
     * [Pré-requisitos](#pré-requisitos)
@@ -35,10 +34,8 @@ Aplicação backend para gestão de vendas com funcionalidades para criação de
 - Não pode haver um mesmo email sendo usado por mais de um usuário;
 
 
----
 
-
-## ⚙️ Funcionalidades
+### ⚙️ Funcionalidades
 
 Aplicaremos conceitos de boas práticas e qualidade no código, usando Design Patterns, Domain Driven Design (DDD) e Princípios SOLID, além de introduzir Testes Automatizados com o framework Jest.
 
@@ -139,6 +136,23 @@ docker run \
    -p 5432:5432 \
    -d \
    postgres:11.5
+
+# cria interface do pg
+
+   $ docker run \
+   --name adminer \
+   -p 8080:8080 \
+   --link postgres:postgres \
+   -d \
+   adminer
+
+# login interface do adminer em localhost:8080
+
+   sistema: PostgreSQL
+   servidor: postgres
+   usuário: admin
+   senha: root
+   base de dados: sales
 
 ```
 
