@@ -16,7 +16,7 @@ Tabela de conteúdos
   * [Layout](#-layout)
   * [Como executar o projeto](#-como-executar-o-projeto)
     * [Pré-requisitos](#pré-requisitos)
-    * [Rodando o Projeto](#user-content--rodando-o-backend-servidor)
+    * [Rodando o Projeto](#user-content--rodando-o-projeto)
   * [Tecnologias](#-tecnologias)
 
 <!--te-->
@@ -157,6 +157,7 @@ docker run \
 ```
 
 #### 🎲 Rodando o projeto
+
 ```bash
 
 # Instale as dependências na raiz do projeto
