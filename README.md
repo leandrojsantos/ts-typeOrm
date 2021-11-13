@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
- <img alt="typeorm" title="#typeorm" src="" width="600px">
+ <img alt="typeorm" title="#typeorm" src="./imgs/img1.jpg" width="500px">
 
 <h4 align="center">
  🚧Em produção🚀 🚧
@@ -49,10 +49,10 @@ Principais recursos que implementaremos no projeto:
 - [X] TypeORM com o padrão Repository
 - [X] Migrations
 - [ ] Relacionamento Many-to-Many
-- [ ] Filesystem/upload de arquivos
+- [X] Filesystem/upload de arquivos
 - [ ] Armazenamento de arquivos em Bucket Amazon S3
-- [ ] Envio de email fake (dev env) e email profissional com o Zoho Mail e Amazon SES
-- [ ] Autenticação JWT Token
+- [X] Envio de email fake (dev env) e email profissional com o Zoho Mail e Amazon SES
+- [X] Autenticação JWT Token
 - [ ] Cache com Redis
 - [ ] Proteção contra ataque DDoS
 - [ ] Design Patterns com Domain Driven Design (DDD) e Princípios SOLID
@@ -96,13 +96,13 @@ O layout da aplicação:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com),[Node.js](https://nodejs.org/en/),
+[Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/)
 
-* Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-* Um sgbd que suporte uuuid sugiro [DBeaver](https://dbeaver.io/download/)
+* Um sgbd que suporte uuid sugiro [DBeaver](https://dbeaver.io/download/)
 
 * Ter conhecimento básico sobre container e [Docker](https://docs.docker.com/get-docker/)
+
+* Ter conhecimento básico sobre [Insomia](https://insomnia.rest/download)
 #### 1º Criar um arquivo `ormconfig.json` na raiz da pasta server, onde será config o banco de dados
 ```bash
 {
@@ -164,15 +164,17 @@ docker run \
 $ yarn
 $ yarn add -D tsconfig-paths
 
-# verificar se banco de dado esta criado corretamente e conectado
-# feito rode o comando para criar coluna e tabelas no banco de dados
+# verificar o banco de dado esta criado corretamente e conectado
+
+# comando para criar coluna e tabelas no banco de dados
 $ yarn typeorm migration:run
 
 # start na api
 1 terminal rode yarn dev
-2 abra insonima e nele projeto typeorm-ts
-3 no insomia atualize o token, pois dura 1 dia
-4 teste as funções com CRUD, por exemplo
+2 abra insonima e
+3 importe rotas do projeto typeorm-ts
+4 no insomia atualize o token, pois dura 1 dia com a rota 'auth'
+5 teste as funções com CRUD, por exemplo
 
 ```
 ---
@@ -191,18 +193,21 @@ Node.js, Express, Typescript, TypeORM, Postgres através de container Docker, Re
 * Testes Automatizados com o framework Jest
 
 
-### Na parte do Server foram utilizadas as seguintes bibliotecas:
+#### Na parte do Server foram utilizadas as seguintes bibliotecas:
 
 ```bash
-    "bcryptjs": "^2.4.3",
-    "celebrate": "^15.0.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-async-errors": "^3.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "multer": "^1.4.2",
-    "pg": "^8.6.0",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.34"
+    "bcryptjs": para criptografia de senha
+    "celebrate": para validação de dados
+    "cors": para permitir acesso a api de outros domínios
+    "date-fns": para tratar datas
+    "express": para criar aplicação
+    "express-async-errors": para tratar erros de async
+    "handlebars": para criar templates
+    "jsonwebtoken": para gerar token
+    "multer": para upload de arquivos
+    "nodemailer": para enviar email
+    "pg": para conexão com o banco de dados
+    "reflect-metadata": para criar metadados
+    "typeorm":para conexão com o banco de dados
 
 ```
