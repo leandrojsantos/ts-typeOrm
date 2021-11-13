@@ -2,6 +2,7 @@ import AppError from '@shared/errors/AppError';
 import UsersRepository from '../typeorm/repositories/UsersRepository';
 import { getCustomRepository } from 'typeorm';
 import UserTokensRepository from '../typeorm/repositories/UserTokensRepository ';
+import EtherealMail from '@config/mail/EtherealMail';
 
 interface IRequest {
   email: string;
@@ -17,9 +18,22 @@ class SendForgotPasswordEmailService {
       throw new AppError('NOT exists.....');
     }
 
-    const token = await userTokensRepository.generate(user.id);
-    //return token;
-    console.log(token);
+    const { token } = await userTokensRepository.generate(user.id);
+
+    await EtherealMail.sendMail({
+      to: {
+        name: user.name,
+        email: user.email,
+      },
+      subject: 'SALES_API reset pass!!!',
+      templateData: {
+        template: `reset-password para {{name}} :  {{token}}`,
+        variables: {
+          name: user.name,
+          token,
+        },
+      },
+    });
   }
 }
 
