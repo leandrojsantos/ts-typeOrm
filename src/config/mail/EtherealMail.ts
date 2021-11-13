@@ -11,12 +11,12 @@ interface ITemplateVariables {
 }
 
 interface IParseMailTemplate {
-  template: string;
+  file: string;
   variables: ITemplateVariables;
 }
 
 interface ISendMail {
-  to: string;
+  to: IMailContact;
   from: IMailContact;
   subject: string;
   templateData: IParseMailTemplate;
