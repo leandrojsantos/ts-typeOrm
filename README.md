@@ -160,7 +160,7 @@ docker run \
 
 ```bash
 
-# Instale as dependências na raiz do projeto
+# Instale as dependências e pastas na raiz do projeto
 $ yarn
 $ yarn add -D tsconfig-paths
 
@@ -171,10 +171,10 @@ $ yarn typeorm migration:run
 
 # start na api
 1 terminal rode yarn dev
-2 abra insonima e
-3 importe rotas do projeto typeorm-ts
-4 no insomia atualize o token, pois dura 1 dia com a rota 'auth'
-5 teste as funções com CRUD, por exemplo
+2 abra insonima e importe rotas do projeto typeorm-ts
+3 no insomia atualize o token, pois dura 1 dia com a rota 'auth'
+4 teste as funções com CRUD, por exemplo
+5
 
 ```
 ---
