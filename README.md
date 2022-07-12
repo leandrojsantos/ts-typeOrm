@@ -126,8 +126,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 ```
 #### 2º Postgres através de container Docker
 ```bash
-# rode esse comando, caso quera troca senha e nome do database
-# lembre-se de tambem no `ormconfig.json`
+# rode esse dois comandos caso quera troca senha e nome do database, lembre-se de tambem no `ormconfig.json`
 docker run \
    --name postgres \
    -e POSTGRES_USER=admin \
@@ -138,8 +137,7 @@ docker run \
    postgres:11.5
 
 # cria interface do pg
-
-   $ docker run \
+docker run \
    --name adminer \
    -p 8080:8080 \
    --link postgres:postgres \
@@ -147,7 +145,6 @@ docker run \
    adminer
 
 # login interface do adminer em localhost:8080
-
    sistema: PostgreSQL
    servidor: postgres
    usuário: admin
@@ -160,21 +157,20 @@ docker run \
 
 ```bash
 
-# Instale as dependências e pastas na raiz do projeto
-$ yarn
-$ yarn add -D tsconfig-paths
+#1 Instale as dependências e pastas na raiz do projeto em um terminal:
+yarn
+yarn add -D tsconfig-paths
 
-# verificar o banco de dado esta criado corretamente e conectado
+#2 verificar o banco de dado esta criado corretamente e conectado !!!
 
-# comando para criar coluna e tabelas no banco de dados
-$ yarn typeorm migration:run
+#3 comando para criar coluna e tabelas no banco de dados
+yarn typeorm migration:run
 
-# start na api
-1 terminal rode yarn dev
-2 abra insonima e importe rotas do projeto typeorm-ts
-3 no insomia atualize o token, pois dura 1 dia com a rota 'auth'
-4 teste as funções com CRUD, por exemplo
-5
+#4 start na api:
+em um  terminal rode yarn dev
+abra insonima e importe rotas do projeto typeorm-ts
+no insomia atualize o token, pois dura 1 dia com a rota 'auth' teste as funções com CRUD, por exemplo
+
 
 ```
 ---
