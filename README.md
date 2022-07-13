@@ -162,12 +162,17 @@ yarn
 yarn add -D tsconfig-paths
 
 #2 verificar o banco de dado esta criado corretamente e conectado !!!
+A biblioteca do TypeORM recebeu uma nova versão recentemente e algumas configurações ficaram incompatíveis com o conteúdo, como por exemplo, o uso do CLI para rodar as migrações, o método com as configurações de conexão com o servidor de banco de dados, além de outras coisas.
+Caso a versão instalada em seu projeto seja a partir de 0.3.x, recomendo usar a mesma versão do repositório a versão 0.2.29
+Para abrir o TypeORM help, use o comando: yarn typeorm
 
-#3 comando para criar coluna e tabelas no banco de dados
+#3 start na api:
+em um  terminal rode: yarn dev
+
+#4 comando para criar coluna e tabelas no banco de dados, em um terminal rode:
 yarn typeorm migration:run
 
-#4 start na api:
-em um  terminal rode yarn dev
+#5 verificar api com insomnia:
 abra insonima e importe rotas do projeto typeorm-ts
 no insomia atualize o token, pois dura 1 dia com a rota 'auth' teste as funções com CRUD, por exemplo
 
