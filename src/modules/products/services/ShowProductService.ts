@@ -10,12 +10,11 @@ interface IRequest {
 class ShowProductService {
   public async execute({ id }: IRequest): Promise<Product> {
     const productsRepository = getCustomRepository(ProductRepository);
-
     const product = await productsRepository.findOne(id);
-    if (!product) {
-      throw new AppError('Product not found...');
-    }
-    return product;
+      if (!product) {
+        throw new AppError('Produto não encontrado...');
+      }
+      return product;
   }
 }
 

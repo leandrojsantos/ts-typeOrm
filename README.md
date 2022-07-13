@@ -66,7 +66,7 @@ Principais recursos que implementaremos no projeto:
 
 `shared` - módulos de uso geral compartilhados com mais de um módulo da aplicação, como por exemplo, o arquivo server.ts, o arquivo principal de rotas, conexão com banco de dados, etc.
 
-`services` - estarão dentro de cada módulo da aplicação e serão responsáveis por todas as regras que a aplicação precisa atender, como por exemplo:
+`services` - estarão dentro de cada módulo da aplicação e serão responsáveis por todas as regras que a aplicação precisa atender, como por exemplo cadastro de clientes, cadastro de produtos, etc... e :
 1 - A senha deve ser armazenada com criptografia;
 2 - Não pode haver mais de um produto com o mesmo nome;
 3 - Não pode haver um mesmo email sendo usado por mais de um usuário;
@@ -150,6 +150,9 @@ docker run \
    usuário: admin
    senha: root
    base de dados: sales
+
+# Excluir images,container,volumes ou tudo
+  docker system prune --all --force --volumes
 
 ```
 

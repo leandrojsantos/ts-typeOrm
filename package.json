@@ -1,8 +1,8 @@
 {
   "name": "ts-type-orm",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "main": "index.js",
-  "license": "MIT",
+  "license": "",
   "author": "leandrojsantos",
   "scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
@@ -12,14 +12,9 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
-    "@types/joi": "^17.2.3",
-    "@types/jsonwebtoken": "^8.5.4",
-    "@types/multer": "^1.4.7",
     "@types/node": "^18.0.3",
-    "@types/nodemailer": "^6.4.4",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",
@@ -31,16 +26,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "celebrate": "^15.0.0",
     "cors": "^2.8.5",
-    "date-fns": "^2.25.0",
     "express": "^4.18.1",
-    "express-async-errors": "^3.1.1",
-    "handlebars": "^4.7.7",
-    "jsonwebtoken": "^8.5.1",
-    "multer": "^1.4.2",
-    "nodemailer": "^6.7.0",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.29"
