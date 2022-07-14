@@ -163,6 +163,7 @@ docker run \
 #1 Instale as dependências e pastas na raiz do projeto em um terminal:
 yarn
 yarn add -D tsconfig-paths
+npx tsc
 
 #2 verificar o banco de dado esta criado corretamente e conectado !!!
 A biblioteca do TypeORM recebeu uma nova versão recentemente e algumas configurações ficaram incompatíveis com o conteúdo, como por exemplo, o uso do CLI para rodar as migrações, o método com as configurações de conexão com o servidor de banco de dados, além de outras coisas.
