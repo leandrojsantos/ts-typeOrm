@@ -5,7 +5,7 @@ import CreateProductService from '../services/CreateProductService';
 import UpdateProductService from '../services/UpdateProductService';
 import DeleteProductService from '../services/DeleteProductService';
 
-class ProductsController {
+export default class ProductsController {
   public async index(request: Request, response: Response): Promise<Response> {
     const listProducts = new ListProductService();
     const products = await listProducts.execute();
@@ -41,5 +41,3 @@ class ProductsController {
       return response.json([]);
   }
 }
-
-export default ProductsController;
