@@ -6,6 +6,8 @@ import AppError from '@shared/errors/AppError';
 import cors from 'cors';
 import routes from './routes';
 import { errors } from 'celebrate';
+import uploadConfig from '@config/upload';
+
 
 /**instancia do express como app e usa: */
 const app = express();
@@ -13,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 app.use(errors());
+app.use('/file', express.static(uploadConfig.directory));
 
 /**tratamento para erros */
 app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
