@@ -12,12 +12,13 @@
 Tabela de conteúdos
 =================
 <!--ts-->
-  * [Sobre o projeto](#-sobre-o-projeto)
-  * [Layout](#-layout)
-  * [Como executar o projeto](#-como-executar-o-projeto)
+  * [Sobre o projeto](#💻-sobre-o-projeto)
+  * [Layout](#🎨-layout)
+  * [Como executar o projeto](#🚀-como-executar-o-projeto)
     * [Pré-requisitos](#pré-requisitos)
-    * [Rodando o Projeto](#user-content--rodando-o-projeto)
-  * [Tecnologias](#-tecnologias)
+    * [Rodando o Projeto](#🎲-rodando-o-projeto)
+  * [Tecnologias](#🛠-tecnologias)
+  * [Anexos](#anexo)
 
 <!--te-->
 
@@ -216,3 +217,5 @@ Node.js, Express, Typescript, TypeORM, Postgres através de container Docker, Re
     "typeorm":para conexão com o banco de dados
 
 ```
+
+## Anexo
