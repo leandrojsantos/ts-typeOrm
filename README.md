@@ -12,13 +12,14 @@
 Tabela de conteúdos
 =================
 <!--ts-->
-  * [Sobre o projeto](#💻-sobre-o-projeto)
-  * [Layout](#🎨-layout)
-  * [Como executar o projeto](#🚀-como-executar-o-projeto)
-    * [Pré-requisitos](#pré-requisitos)
-    * [Rodando o Projeto](#🎲-rodando-o-projeto)
-  * [Tecnologias](#🛠-tecnologias)
-  * [Anexos](#anexo)
+   * [Sobre o projeto](#💻-sobre-o-projeto)
+      * [Funcionalidades](#⚙️-funcionalidades)
+   * [Layout](#🎨-layout)
+   * [Como executar o projeto](#🚀-como-executar-o-projeto)
+      * [Pré-requisitos](#pré-requisitos)
+      * [Rodando o projeto](#🎲-rodando-o-projeto)
+   * [Tecnologias](#🛠-tecnologias)
+   * [Anexos](#🧭-anexos)
 
 <!--te-->
 
@@ -79,15 +80,7 @@ Principais recursos que implementaremos no projeto:
 O layout da aplicação:
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
- <img alt="typeorm" title="#typeorm" src="" width="400px">
-
- <img alt="typeorm" title="#typeorm" src="" width="400px">
-</p>
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
- <img alt="typeorm" title="#typeorm" src="" width="400px">
-
- <img alt="typeorm" title="#typeorm" src="" width="400px">
+  <img alt="img1" title="#img1" src="./assets" width="400px">
 </p>
 
 ---
@@ -157,7 +150,7 @@ docker run \
 
 ```
 
-#### 🎲 Rodando o projeto
+### 🎲 Rodando o projeto
 
 ```bash
 
@@ -199,7 +192,7 @@ Node.js, Express, Typescript, TypeORM, Postgres através de container Docker, Re
 * Testes Automatizados com o framework Jest
 
 
-#### Na parte do Server foram utilizadas as seguintes bibliotecas:
+### Na parte do Server foram utilizadas as seguintes bibliotecas:
 
 ```bash
     "bcryptjs": para criptografia de senha
@@ -217,5 +210,11 @@ Node.js, Express, Typescript, TypeORM, Postgres através de container Docker, Re
     "typeorm":para conexão com o banco de dados
 
 ```
+## 🧭 Anexos
 
-## Anexo
+Documentos para auxiliar no projeto:
+
+```bash
+
+
+```
